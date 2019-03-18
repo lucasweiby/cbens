@@ -1,0 +1,107 @@
+#header-interna {
+	.navbar {
+		background-color: $mainColor !important;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+
+		.navbar-brand {
+			.img-fluid {
+				max-width: 64%;
+			}
+		}
+
+		@include desktop {
+			.navbar-collapse {
+				justify-content: flex-end;
+			}
+		}
+
+		.navbar-nav {
+			.nav-item {
+				padding: 0 .5em;
+				.nav-link {
+					text-transform: uppercase;
+					color: #fff;
+					font-family: $Gotham;
+					font-weight: 300;
+					border-bottom: 1px solid #fff;
+					transition: all .1s ease-in;
+					&:hover {
+						border: none;
+						transform: translateY(4px);
+					}
+					@include mobile {
+						color: #1e1e1e;
+					}
+				}
+			}
+		}
+	}
+
+	@include mobile {
+		.navbar-light .navbar-toggler {
+			width: 50px;
+			height: 50px;
+			border-color: #fff;
+			color: #fff;
+			border-radius: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.navbar-collapse {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			z-index: 99;
+			text-transform: uppercase;
+			text-align: center;
+			opacity: .97;
+		}
+
+		.collapse {
+			display: none;
+		}
+
+		.collapsing {
+		    -webkit-transition: none;
+		    transition: none;
+		    display: none;
+		}
+
+		.navbar-toggler {
+			position: absolute;
+			right: 16px;
+		}
+	}
+
+	.showSm {
+		position: absolute;
+		@include desktop {
+			display: none;
+		}
+	}
+
+	.showMd {
+		@include desktop {
+			display: flex;
+		}
+		@include mobile {
+			display: none;
+		}
+	}
+
+	.closeBtn {
+		position: fixed;
+		top: 16%;
+		font-size: 32px;
+		animation-delay: 1s;
+		cursor: pointer;
+	}
+}

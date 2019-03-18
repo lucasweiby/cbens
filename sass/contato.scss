@@ -1,0 +1,72 @@
+.contato {
+	padding: 64px 0;
+  @include mobile {
+    position: relative;
+    top: 64px;
+  }
+
+	.marginContent {
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	.changeSize {
+		@include desktop{
+			position: absolute;
+			right: 0;
+		}
+
+    @include mobile {
+      position: absolute;
+			right: 0;
+    }
+		ul {
+			list-style: none;
+			li {
+				float: left;
+				margin: 0 4px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.sectionTitle {
+		font-family: $Gotham;
+		text-transform: uppercase;
+		color: $mainColor;
+		margin-bottom: 16px;
+		&:after {
+			content: " ";
+			width: 100%;
+			height: auto;
+			border-bottom: 1px solid #1e1e1e;
+			position: absolute;
+			display: block;
+			margin: 8px 0;
+		}
+	}
+
+	.content {
+		margin: 32px 0;
+
+    form {
+      .form-group {
+        label {
+          text-transform: uppercase;
+        }
+      }
+
+      .submit {
+        border-radius: 0;
+        background-color: $mainColor;
+        width: 20%;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 300;
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+	}
+}

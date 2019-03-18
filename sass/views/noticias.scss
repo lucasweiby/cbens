@@ -1,0 +1,86 @@
+#noticias {
+	background-color: #eee;
+	padding: 64px 0;
+
+	.sectionHeader {
+		border-bottom: 1px solid #1e1e1e;
+		margin-bottom: 1%;
+		display: flex;
+		align-items: center;
+		h4 {
+			font-family: $Gotham;
+			font-weight: 500;
+			text-transform: uppercase;
+			color: #1e1e1e;
+			margin-bottom: 1%;
+			@include mobile {
+				margin-bottom: 4%;
+			}
+		}
+		@include mobile {
+			margin-bottom: 4%;
+		}
+	}
+
+	.card {
+		margin-bottom: 2%;
+		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		transition: all .1s ease-in;
+		&:hover {
+			transform: scale(1.01);
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+
+		.category {
+			background-color: $mainColor;
+			padding: 8px 20px;
+			font-family: $PNLight;
+			color: #fff;
+			letter-spacing: 4px;
+		}
+	}
+
+	.card-body {
+		h3 {
+			color: $mainColor;
+		}
+
+		p {
+			font-family: $PNLight;
+		}
+	}
+
+	.readMore {
+	    position: absolute;
+	    left: -2%;
+	    top: 4%;
+	    border-radius: 0;
+	    background-color: $mainColor;
+	    color: #fff;
+	    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+	    &:hover {
+	    	background-color: $secColor;
+	    }
+	}
+
+	.btnBlog {
+	    border-radius: 0;
+	    background-color: $mainColor;
+	    color: #fff;
+	    float: right;
+	    margin-top: -8%;
+	    &:hover {
+	    	background-color: $secColor;
+	    }
+
+	    @include mobile {
+	    	margin-top: -16%;
+	    }
+	}
+
+	.esp {
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+}

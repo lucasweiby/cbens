@@ -1,0 +1,22 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+@import 'header.scss';
+@import 'header-interna.scss';
+
+@import 'views/anais.scss';
+@import 'views/noticias.scss';
+@import 'views/mensagem.scss';
+
+@import 'apresentacao.scss';
+@import 'contato.scss';
+
+@import 'footer.scss';
+
+.container {
+	max-width: 80%;
+}
+
+body {
+	font-family: $PNRegular;
+}
